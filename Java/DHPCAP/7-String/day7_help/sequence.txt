@@ -1,0 +1,116 @@
+Today's Topics
+Revise interfaces
+Exception Handling 
+String Handling
+Date Time Handling
+Wrapper classes
+
+Revise 
+What is an interface (i/f) : Blueprint of a class
+Why i/f ?
+
+1. 100 % abstraction
+2. alternative to multiple inheritance
+3. loose coupling (separation between WHAT n HOW)
+
+
+Till JDK 7 : What does it mainly contain ?
+data members : public static final
+methods : public abstract
+
+Relationship between i/f n imple class : 
+Can 1 class imple multiple i/f : YES (implements)
+Can 1 i/f extend from multiple i/f : YES (extends) 
+Can 1 class extend from multiple classes : NO
+Can 1 i/f be imple by multiple imple classes ? : YES
+
+--------------------------
+Exception Handling : run time errors
+Flow , inheritance hierarchy , checked vs un checked excs
+keywords : try, catch , throws , finally, throw , try-with-resources
+Java : built-in / custom exception
+
+eg : try {
+String num="abc12345";
+sop(Integer.parseInt(num)); 
+....
+} catch (Exception e)
+{....}
+code contines...
+
+//JVM : throw Throwable instance;
+//throw new NFE("num can't be parsed as integer");
+JVM chks : no exc handler => code aborts (e.printStackTrace() --- name of exc, err mesg , location)
+in case MATCHING exc handler exists =>try aborts , catch --code continues
+
+Throwable <---- Error , Exception <---- RuntimeException
+un chekd exc --extending from RuntimeException
+chked excs DO NOT extend RuntimeException
+who does not diff bet them ? JVM (i.e in case of un handled chked as well as un chked exc ---> JVM aborts code)
+
+who diff bet them ? javac
+Javac forces handling of the CHECKED exceptions upon prog (o.w : javac err)
+2 ways to satisfy javac : 1. try-catch (actual handling)
+2. main() : UI : accept email ---> 
+validateEmail(email) throws InvalidInputException,SocketExc,InterruptedExc{
+valid --- continue
+invalid email : throw new InvalidInputException("Invalid Email");//chked exc
+}
+
+when is adding "throws" keyword mandatory ?
+only in case of un handled(no catch clause) checked exc.
+BUT add it even in case of un handled , unchked exc.
+
+
+Objective : Validate speed of vehicle , running on highway
+min speed : 40 
+max speed : 80
+If vehicle's speed  < 40 : alert the driver (Too slow!!!!!!)
+If vehicle's speed  > 80 : alert the driver (Too fast!!!!!!)
+within range : ok mesg
+classes : 
+1. Custom exception class (user defined exc)
+HOW ? create a class extends from Throwable / Error / RuntimeException/Exception/NullpointerExc...
+eg : public class SpeedOutOfRangeException extends Exception
+{
+   public SpeedOutOfRangeException(String mesg)
+   {
+      super(mesg);
+   }
+}
+
+2. utils.ValidationRules 
+Add a static method for validating the speed.
+public static void validateSpeed(int speed)
+{
+ ......
+}
+
+3. Tester : Scanner 
+will invoke validateSpeed method of the ValidationRules .
+
+String Handling
+java.lang.String
+immutability
+== vs equals
+literal strings vs non literal
+
+String class API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+Revise
+I/O
+which is the package ? java.io / java.nio
+java.io : read/write methods : blocking API
+java.io Consists  of : streams
+stream : data transfer medium (bytes)
+Devices : console(stdin / stdout : System.in : InputStream  / System.out : PrintStream)
+File : File handling streams
+Pipe : pipe handling streams
+Socket : socket strms .....
+Stream : represents data transfer
+To read data from a data src ----> Java app : input stream
+To write data from a Java app ----> data sink  : output stream
+
+3 different categories of streams --- 
+node streams(eg : FileReader,FileWriter,PipedReader.....) ---un buffered , device handling
+buffering streams : optional BUT reco for large data xfer 
+eg (BufferedReader,BufferedWriter, PrintWriter)
+Filtering / conversion streams : bytes --> java prim types, bytes --> char , bytes --> java object....
+
+java.io : InputStream , OutputStream,Reader, Writer : abstract
+
+
+1.Revision objective
+Read data from text file till EOF in a buffered manner
+(declarative)
+Chain of I/O strms
+Java App      <-----   BR<---- FR<----- Text File
+try(sc;BR br=new BR(new FR(sc.nextLine()))
+{
+   br.lines().forEach(System.out::println);
+}catch-all
+
+2. Copy Text files in a buffered manner
+
+Chain of I/O strms
+Java App      <-----   BR<---- FR<----- Text File
+Java App  ----> PW ---> FW ---> Text File
+triggers : buf full / flush /close/ auto flushing (flush on new line)
+supports conversion from chra --> bin
+supports print,println,printf,write
+
+try(sc;BR br=new BR(new FR(sc.nextLine());
+PW pw=new PW(new FW(sc.nextLine(),true))
+{
+   br.lines().forEach(pw::println);
+}catch-all
+
+
+3. Objectve : Store product detail  present in a HashMap , sorted as per manufacture date, into a text file , using buffer.
+3.1 core class : Product ...
+3.2 Custom exc
+3.3 Validation rules 
+3.4 CollectionUtils : i/f
+1. List<Product> ---> Map
+2. add another method for sorting the map
+3.5 IOUtils : i/f
+add a method to write sorted product data to the text file (using buffers) 
+4. Tester
+
+
+5. Enter Binary I/O
+
+Objective : 
+1. Store product details (HM/List/Set) in a bin file
+
+2. Re store product details from the bin file
+Identify suitable streams
+Java App ---->FOS --->BIn File
+BUffered data write
+Java App ---->BOS ---> FOS --->BIn File
+eg : try(BOS out=new BOS(new FOS(fileName)))
+{...}
+
+If u use BOS : who will have to convert HM<Integer,Product> to byte/byte[] ? : prog
+
+Which are conversion strms ?
+DataOutputStream n DataInputStream
+methods of DataOutputStream ---converting prim types n strings ---> bytes
+eg : public void writeInt(int i) throws IoExc
+writeLong,....+ writeUTF(String s)
+Updated chain of strms
+Java App ---->DOS ---->BOS ---> FOS --->BIn File
+For restoring the details 
+Java App <----- DIS <----BIS<-----FIS <------BIn File
+eg : in.readInt() : int , readUTF ......---> 1 product ---> HM
+
+Object streams
+serialization n de serialization
+
+
+Enter threads
+1. Use "extends Thread" to test concurrency .
+main thread (system thrd) : parent thread --will be used to create child thrds(user defined)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

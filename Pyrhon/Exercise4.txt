@@ -1,0 +1,183 @@
+def list_display_members(members) :
+	pass # write your logic
+
+def list_add_element(members) :
+	pass # write your logic
+
+def list_add_elements(members):
+	pass # write your logic
+
+def list_remove_element(members) :
+	pass # write your logic
+
+def remove_last_element(members) :
+	pass # write your logic
+
+def display_3_4_5_element(members):
+	pass # write your logic
+
+			
+def my_list_store():
+    print("\n Welcome to Our List Store !!! ")
+    print("Please enter a list Comma seperated that you would want to perform Operation Upon")
+    members = input('for ex: Pratiksha,Kevin,Sachin,Yuvraj,Sania \n').split(",")
+
+    while(True):
+        print("\n*************** Menu **********************")
+        print("Operations supported by our program are :")
+        print("  1:  Display number of elements in the members list")
+        print("  2:  Add an element to the members collection like 'Sehwag' ")
+        print("  3:  Add elements to the members collection like ['David','Bret','Sanju']")
+        print("  4:  Remove a member from the collection at a given subscript")
+        print("  5:  Remove the last member from the collection ")
+        print("  6:  Display third, fourth and fifth element from the collection ")
+        print("  7: Exit the Program ")
+        choice = int(input("Please enter your choice "))
+        
+        if choice   ==1:
+            list_display_members(members) 
+        elif choice ==2:
+            list_add_element(members) 
+        elif choice ==3:
+            list_add_elements(members)
+        elif choice ==4:
+            list_remove_element(members) 
+        elif choice ==5:
+            remove_last_element(members) 
+        elif choice ==6:
+            display_3_4_5_element(members) 
+        elif choice ==7:
+            break
+        else:
+            print("Invalid Input , Please Try Again !!!!  ")
+
+my_list_store()			
+
+
+# My tuple store 
+def tuple_display_members(members) :
+	pass # write your logic
+
+def display_3_4_5_element(members) :
+	pass # write your logic
+
+def tuple_retrieve_element(members):
+	pass # write your logic
+
+def tuple_retrieve_elements(members) :
+	pass # write your logic
+
+def find_min_element(members) :
+	pass # write your logic
+
+def reverse_tuple(members):
+	pass # write your logic
+
+			
+def my_tuple_store():
+    print("\n Welcome to Our tuple Store !!! ")
+    print("Please enter a tuple Comma seperated that you would want to perform Operation Upon")
+    members = tuple(input('for ex: Pratiksha,Kevin,Sachin,Yuvraj,Sania \n').split(","))
+
+    while(True):
+        print("\n*************** Menu **********************")
+        print("Operations supported by our program are :")
+        print("  1:  Display elements of the tuple")
+        print("  2:  Display third, fourth and fifth element from the collection ")
+        print("  3:  Retrieve element at a given subscript")
+        print("  4:  Retrieve elements from a given subscript and to a given subscript")
+        print( " 5:	 Find minimum element in the tuple " )
+        print( " 6:	 Reverse elements in the tuple " )
+        print("  7: Exit the Program ")
+        choice = int(input("Please enter your choice "))
+        
+        if choice   ==1:
+            tuple_display_members(members) 
+        elif choice ==2:
+            display_3_4_5_element(members) 
+        elif choice ==3:
+            tuple_retrieve_element(members)
+        elif choice ==4:
+            tuple_retrieve_elements(members) 
+        elif choice ==5:
+            find_min_element(members) 
+        elif choice ==6:
+            reverse_tuple(members) 
+        elif choice ==7:
+            break
+        else:
+            print("Invalid Input , Please Try Again !!!!  ")
+
+my_tuple_store()			
+
+# my string store
+def string_display(string_input) :
+    pass # write your logic here 
+
+def display_3_4_5_element(string_input) :
+    pass # write your logic here 
+
+def string_retrieve_element(string_input):
+    pass # write your logic here 
+
+def string_retrieve_elements(string_input) :
+    pass # write your logic here 
+
+def find_min_element(string_input) :
+    pass # write your logic here 
+
+def reverse_string(string_input) :
+    pass # write your logic here 
+
+def  find_each_character_count(string_input):
+    pass # write your logic here 
+
+def  find_character_count_greater_than_1(string_input):
+    pass # write your logic here 
+
+def  check_palindrome(string_input):
+    pass # write your logic here 
+             
+def my_string_store():
+    print("\n Welcome to Our string Store !!! ")
+    string_input = input("Please enter a string that you would want to perform Operation Upon").strip()
+
+    while(True):
+        print("\n*************** Menu **********************")
+        print("Operations supported by our program are :")
+        print("  1:  Display the string")
+        print("  2:  Display third, fourth and fifth element from the string ")
+        print("  3:  Retrieve element at a given subscript")
+        print("  4:  Retrieve elements from a given subscript and to a given subscript")
+        print( " 5:	 Find minimum character in the string " )
+        print( " 6:	 Reverse the string " )
+        print( " 7:	 Output list of tuple( character,count) for each characters of the string  " )
+        print( " 8:	 Output list of characters of the string that appear more than once " )
+        print( " 9:  Check if the string is a palindrome and return output message accordingly")
+        print("  10: Exit the Program ")
+        choice = int(input("Please enter your choice "))
+        
+        if choice   ==1:
+            string_display(string_input) 
+        elif choice ==2:
+            display_3_4_5_element(string_input) 
+        elif choice ==3:
+            string_retrieve_element(string_input)
+        elif choice ==4:
+            string_retrieve_elements(string_input) 
+        elif choice ==5:
+            find_min_element(string_input) 
+        elif choice ==6:
+            reverse_string(string_input) 
+        elif choice ==7:
+             find_each_character_count(string_input)
+        elif choice ==8:
+             find_character_count_greater_than_1(string_input)
+        elif choice ==9:
+             check_palindrome(string_input)
+        elif choice ==10:
+            break
+        else:
+            print("Invalid Input , Please Try Again !!!!  ")
+
+my_string_store()

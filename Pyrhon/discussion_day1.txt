@@ -1,0 +1,58 @@
+programmng language ?
+> high level to machine language
+> tool that helps you write  logic that the system can understand
+> instructions to perform a task 
+> automate things ( tasks )
+> syntax belongs to programming language 
+> oops ( style of programming)
+
+set of instructions that machine will perform to 
+complete the task
+
+function1(function2):
+	function2()
+	
+
+-------------
+Conditionals 
+-------------
+
+if <condition1>:
+   if block
+elif <condition2>
+    second if block 
+
+if weather == 'rainy':
+	beverage = 'coffee'
+elif weather == 'sunny':  
+	beverage = 'Ice tea'
+elif weather == 'cold':  
+	beverage = 'Hot tea/coffee'
+else:
+	beverage = 'Water'
+
+--------	
+loops :
+----------
+
+# while loop
+cnt_variable = 0 
+while cnt_variable < 10 :
+		while block 
+		cnt_variable = cnt_variable + 1
+		
+
+# do while loop 
+choice  = 'Y'
+while True:
+		while block 
+		choice = input('Please enter the choice ')
+		if choice == 'N':
+			break
+			
+# for loop 
+for var in range(0,10,1):
+	  for block 
+
+for var in range(10):
+	  for block 

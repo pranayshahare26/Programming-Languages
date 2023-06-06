@@ -1,0 +1,11 @@
+# Tutorials
+https://python-course.eu/python-tutorial/execute-a-script.php
+https://www.programiz.com/python-programming
+https://developers.google.com/edu/python/introduction
+https://pynative.com
+https://pythontutorials.eu
+
+# Some websites for practice :
+https://pynative.com/python-exercises-with-solutions/
+https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
+https://www.practicepython.org/

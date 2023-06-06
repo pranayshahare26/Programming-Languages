@@ -1,0 +1,92 @@
+eg : System.out.println(ref);//ref : ref type of var : Box .....: ref.toString()
+
+Assgn 4
+4. Update performanceBonus or hourly rate
+I/P : emp id , bonus or hourly rate increment
+Update the details suitably.
+
+
+eg : Emp[] org=new Emp[sc.nextInt()];//Emp[] object
+case 1: .....boundary chking
+ org[counter++] =new Mgr(....);//up casting
+break;
+case 2 ...
+
+case 4: //I/P : emp id , bonus or hourly rate increment
+sop("Enter emp id n incr in bonus or hrly rate");
+int id=sc.nextInt();//emp id =10
+double incr=sc.nextDouble();
+//{m1 : 100, w1 :10 , w2 :50,m2:20,m3:101.....}
+for(Emp e : org)//e=org[0],e=org[1]
+ if(e != null)
+  if (e.getId() == id)
+  {
+     if(e instanceof Mgr)
+      ((Mgr) e).setBonus(((Mgr) e).getBonus()+incr));
+     else //it's a worker
+      ((Worker)e).setRate(((Worker)e).getRate()+incr));
+  }
+break;
+ ------------------------------------- 
+Revise : 
+What will happen?
+Consider Fruit, Apple,Orange,Mango entities
+Can u you organize it in the inhertiance hierarchy? YES
+
+How ?
+Object <----Fruit <-----Mango
+Fruit <-----Apple ,Orange
+
+Suppose you have added a common taste method in all classes
+eg : public void taste() {.....}
+
+Fruit : abstract class 
+state : name (private)
+constr : Fruit(name){...}
+add abstract method :
+public abstract void taste();
+
+Apple : Sween n sour
+Orange : sour 
+Mango  : Sweet
+
+In Mango class : you have added a new functionality
+//@Override //anno : method level , compile time annotation : javac err
+public void pulp() {...}
+
+
+What will happen ? 
+//abstract super cls ref ----> ANY concrete subclass instance
+Fruit f=new Apple(...);//up casting
+f.taste();//no javac err, JVM : taste : Apple => Run time poly(DMD) 
+f=new Orange(...);//up casting
+f.taste();//taste : Orange
+f=new Mango();//up casting
+f.pulp();//javac err
+soln : expl downcasting
+((Mango)f).pulp();//no javac err, no run time err 
+
+f=new Orange(..);//up casting
+((Mango) f).pulp();//run time err : ClassCastException : Orange can't be cast intp Mango
+
+Any solution ? : instanceof
+
+How will you apply it ?
+f=new Orange(..);//up casting
+if(f instanceof Mango)//false
+((Mango) f).pulp();//run time err : ClassCastException : Orange can't be cast intp Mango
+else
+ sop("Can't be pulped!!!!!!");
+
+
+When will you need to apply downcasting?
+Iff super cls ref(abstract/concrete)  ------> sub class object & trying to invoke some sub class specific func .
+Before down casting : always perform "instanceof" checking , to avoid run time error
+--------------------------------------------------------------------
+Continue with shapes example (abstraction)
+
+interfaces
+
+exception handling
+
+

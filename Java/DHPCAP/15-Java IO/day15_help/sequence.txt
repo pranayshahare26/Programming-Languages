@@ -1,0 +1,59 @@
+Revise
+Functional interfaces
+i/f containing SAM + optionally default /static methods
+eg : Comparator,Consumer,Supplier,BiConsumer, Runnable,Predicate...
+Annotation : @FunctionalInterface
+
+lambda expression : ano function to add conciseness to the code
+Can be passed as the arg to the higher order function.
+Can be returned from the higher order function.
+(arg list) -> {body}
+
+Function i/f ---can be directly assigned to lambda expr
+
+Function literal : assigning func def to a var.
+
+eg : Display all product details using declarative(func) style
+productList.forEach(p -> sop(p));
+
+Is there any further shortcut ????
+(refer to "regarding method reference")
+productList.forEach(System.out::println);
+
+Sort product details as per price (asc) , w/o touching Product class (Product class is not Comparable)
+
+Using lambda expression
+Collections.sort(list,(p1,p2) -> ((Double)p1.getPrice()).compareTo(p2.getPrice());
+Using method reference
+Collections.sort(list,Comparator.comparing(p -> p.getPrice());
+OR
+Collections.sort(list,Comparator.comparing(Product::getPrice);
+
+
+Sort product details as per price (desc)
+
+Solve assignment on streams
+
+Enter I/O
+Objective
+1.Accept name of text file from user(scanner)
+Read data from the file till EOF , in a buffered manner, display the same.
+
+
+2. Accept src & dest text file names.
+File copy in buffered manner.
+
+3. Objectve : Store product detail  present in a HashMap , sorted as per manufacture date, into a text file , using buffer.
+3.1 core class : Product ...
+3.2 Custom exc
+3.3 Validation rules 
+3.4 CollectionUtils : i/f
+1. List<Product> ---> Map
+2. add another method for sorting the map
+3.5 IOUtils : i/f
+add a method to write sorted product data to the text file (using buffers) 
+
+
+
+
+

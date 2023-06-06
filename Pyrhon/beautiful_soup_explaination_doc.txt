@@ -1,0 +1,81 @@
+<!DOCTYPE html>: This declaration tells the web browser that the document is an HTML5 document.
+
+<html>: This tag is used to start the HTML document and contains all of the other tags.
+
+<head>: This tag contains information about the document that is not displayed in the browser, such as the document title, links to stylesheets, and metadata.
+
+<body>: This tag contains the main content of the web page that is displayed in the browser.
+
+<h1> to <h6>: These tags are used to create headings of different sizes. <h1> is the largest heading, while <h6> is the smallest.
+
+<p>: This tag is used to create paragraphs of text.
+
+<a>: This tag is used to create hyperlinks. The href attribute specifies the URL that the link should point to.
+
+<img>: This tag is used to insert images into the web page. The src attribute specifies the location of the image file.
+
+<ul> and <li>: These tags are used to create unordered lists, where each item is preceded by a bullet point.
+
+<ol> and <li>: These tags are used to create ordered lists, where each item is numbered.
+
+<table>, <thead>, <tbody>, <tr>, <th>, and <td>: These tags are used to create tables. <table> is used to start the table, <thead> and <tbody> are used to group the table headers and table data respectively, <tr> is used to create a row in the table, <th> is used to create a header cell in the table under <thead> tag , and <td> is used to create a data cell in the table under <tbody> tag .
+
+-- sample XML file 
+<students>
+<name>Gaurav</name>
+<rollno>1</rollno>
+<age>12</age>
+<subject_enrolled>Python</subject_enrolled>
+</students>
+
+----- -----
+Beautiful soup 
+----- -----
+Beautiful Soup is a Python library that is used for web scraping purposes to extract data from HTML and XML documents.
+
+It parses the raw HTML and turns it into a structured parse tree that we can navigate and search using Python code.
+
+We can use Beautiful Soup to extract specific data from HTML documents by searching for and filtering specific elements using CSS selectors, element names, class names, IDs, or other attributes.
+
+Beautiful Soup provides various methods and functions that we can use to navigate and manipulate the parse tree, including soup.find(), soup.find_all(), soup.select(), soup.new_tag(), soup.insert(), and many others.
+
+Beautiful Soup can also be used to modify and reformat HTML documents, as well as to convert them to other formats like JSON or CSV.
+
+To use Beautiful Soup, we first need to install it using pip: pip install beautifulsoup4.
+
+We then import the library and create a Beautiful Soup object from the HTML document we want to scrape: soup = BeautifulSoup(html, "html.parser").
+
+Once we have the Beautiful Soup object, we can use its various methods and functions to extract and manipulate the data we want.
+
+Overall, Beautiful Soup is a powerful and versatile library that is widely used in web scraping projects to extract data from HTML and XML documents. It provides a Pythonic way to navigate and search the parse tree, and can save a lot of time and effort in extracting and processing data from web pages.
+
+
+-------
+Functions:
+-------
+
+ some of the key methods and functions provided by Beautiful Soup that we can use to navigate and manipulate the parse tree:
+
+soup.find(): Finds the first element in the parse tree that matches the given criteria (such as an element name, class name, ID, or attribute value).
+
+soup.find_all(): Finds all elements in the parse tree that match the given criteria, and returns them as a list.
+
+soup.select(): Uses a CSS selector to find all elements in the parse tree that match the given criteria, and returns them as a list.
+
+soup.new_tag(): Creates a new HTML element with the given tag name and attributes, and returns it as a Tag object.
+
+soup.insert(): Inserts a new element into the parse tree at the specified location.
+
+soup.extract(): Removes an element from the parse tree.
+
+soup.contents: Returns a list of all the direct child elements of an element in the parse tree.
+
+soup.parent: Returns the parent element of an element in the parse tree.
+
+soup.next_sibling: Returns the next sibling element of an element in the parse tree.
+
+soup.previous_sibling: Returns the previous sibling element of an element in the parse tree.
+
+soup.string: Returns the string contents of an element (i.e., the text inside the tags).
+
+soup.get(): Returns the value of a specified attribute of an element.

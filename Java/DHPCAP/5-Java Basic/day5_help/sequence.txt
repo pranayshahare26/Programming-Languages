@@ -1,0 +1,152 @@
+Today's topics
+Continue with Polymorphism
+Abstraction
+
+
+Revise
+Why Inheritance : reduce duplication n  enhances re usability
+Relationship : IS-A
+upper : super class
+lower : sub class
+super class ---> sub class (generalization ---> specialization)
+Types : single , multi level : supported
+multiple : not supported
+For diamond problem : refer to diagram
+
+constr invocation in inheritance hierarchy : refer to diag.
+
+super --keyword in java
+
+super keyword usages
+1. To invoke immediate super cls's MATCHING  constr 
+eg : Emp HAS-A : id , name ,salary
+method : show()
++ getters
+SD  HAS-A : id , name ,salary, projectsAssigned
+constr of SD
+public SD(id , name ,salary, projectsAssigned)
+{
+  super(id , name ,salary);
+  this.projectsAssigned=projectsAssigned;
+}
+overridden show()
+
+2. To access super cls's accessible members 
+
+eg : In SD class : you have overridden show()
+Objective : show salry n projectsAssigned
+public void show()
+{
+   sop(getSalary()+" "+projectsAssigned);
+}
+
+Objective : show id , name, salry n projectsAssigned of SD
+public void show()
+{
+   super.show();//mandatory to user super
+   sop(projectsAssigned);
+}
+
+
+Important statements
+Sub class IS A super class + something more(addtional data members + methods) + something modified(behaviour : methods : method overriding)
+
+toString ---Object class method
+public String toString() --- F.Q cls Name@hex form of hashCode
+
+what's the need of overriding it ?
+To replace hashCode returning version by actual state details of the object
+
+Regarding optional assignment
+What will happen?
+Consider Fruit, Apple,Orange,Mango entities
+Can u you organize it in the inhertiance hierarchy? : Yes
+
+Describe
+Fruit <-----Apple,Orange,Mango
+
+Suppose you have added a common taste method in all classes
+eg : public void taste() {.....}
+
+Fruit : "NO particular Taste"
+Apple : Sween n sour
+Orange : sour 
+Mango  : Sweet
+
+
+What will happen ? 
+Fruit f=new Apple(...);//up casting
+f.taste();//JVM :  Sween n sour => run time polymorphism(dyn method dispacth)
+f=new Orange(...);//up casting
+f.taste();//JVM : sour 
+f=new Mango();//up casting
+f.taste();//JVM : Sweet
+
+If you want to create a Fruit Basket , what will be the data structure? 
+eg : Fruit[] basket=new Fruit[sc.nextInt()];
+
+How will you add mango,apple,orange to the fruit basket ?
+case 1 : //add mango
+if(counter < basket.length)
+{
+  basket[counter++] =new Mango(sc.next());//up casting
+}else
+ sop("Basket full!!!!!");
+
+How will you display tastes of all the fruits in the basket ? {a1,a2,a3,m1,m2,o1,o2,null.....}
+for(Fruit f : basket)
+ if(f != null)
+  f.taste();//javac : in Fruit : taste n JVM 
+
+
+----------------------
+
+1. Enter polymorphism : 
+Refer to method overloading vs method overriding
+Identify the rules.
+Examples of method overloading : print / println methods
+
+Example of Method overriding
+eg : toString
+
+2. Java Annotations
+eg : @Override annotation
+
+java.lang.Object : universal super class of all java classes
+public String toString() : rets F.Q cls Name @ hashcode
+What's the need of overriding toString : to replace hashCode returning version by actual object details
+
+
+3. Need of downcasting
+Objective : Executing sub class specific functionality.
+Add a new method "study" in Student class & "teach" in Faculty class
+
+Option 4 : User i/p : seat no
+Check if seat no is valid .
+In case of valid seat no  --- If it's a Student , invoke study method , if it's a Faculty invoke teach method
+
+
+4. instanceof keyword
+
+5. Enter abstraction
+
+eg : Shapes scenario
+Solve this
+
+1.abstract class BoundedShape -- x,y 
+Method --public abstract double area(); : abstract method
+public String toString()
+constr : YES
+
+2. Circle -- x,y,radius
+Method --public double area()
+public String toString()
+
+3. Rectangle -- x,y,w,h
+Method --public double area()
+public String toString()
+
+Tester : Using dynamic init of array , create different shapes . Display details & area of all the shapes.
+
+
+

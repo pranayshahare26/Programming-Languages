@@ -1,0 +1,36 @@
+Singleton
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time, in a particular JVM.
+It is a creational design pattern which talks about the creation of an object.
+
+After first time, if we try to instantiate the Singleton class, the new variable also points to the first instance created. So whatever modifications we do to any variable inside the class through any instance, it affects the variable of the single instance created and is visible if we access that variable through any variable of that class type defined.
+
+eg : Device drivers, Cache , DB connection
+
+How To design a singleton class?
+
+Private constructor to restrict instantiation of the class from other classes.
+Private static variable of the same class that is the only instance of the class.
+Public static method that returns the instance of the class, this is the global access point for outer world to get the instance of the singleton class.
+
+Lazy initialization
+Mark constructor as private.
+Write a static method that has return type object of this singleton class. 
+
+Eager initialization
+
+In eager initialization, the instance of Singleton Class is created at the time of class loading, this is the easiest method to create a singleton class but it has a drawback that instance is created even though client application might not be using it.
+
+Mark constructor as private.
+Create static init block to instantiate a singleton
+----------------------------------------
+
+Factory design pattern
+
+It is a creational design pattern which talks about the creation of an object. The factory design pattern says that define an interface ( A java interface or an abstract class) and let the subclasses decide which object to instantiate. The factory method in the interface lets a class defer the instantiation to one or more concrete subclasses.  It is one of the best ways to create an object where object creation logic is hidden to the client. 
+
+Implementation: 
+1. Define a factory method inside an interface. 
+2. Let the subclass implements the above factory method and decide which object to create. 
+In Java constructors are not polymorphic, but by allowing subclass to create an object, we are adding polymorphic behavior to the instantiation. i.e we are trying to achieve Pseudo polymorphism by letting the subclass to decide what to create, and so this Factory method is also called as Virtual constructor. 
+
+eg : Shape Scenario

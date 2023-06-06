@@ -1,0 +1,55 @@
+-----------------------
+EDA Workshop
+-----------------------
+
+Datasets you can use for your analysis:
+
+1) World Happiness Report 2021 dataset: 
+	world-happiness-report.csv
+	world-happiness-report-2021.csv
+
+2) COVID-19 World Vaccination Progress dataset: 
+
+	country_vaccinations_by_manufacturer.csv
+	country_vaccinations.csv
+
+Please note that you may need to clean and preprocess the datasets before starting your analysis.
+
+-----------------------
+Happiness Index Dataset
+-=---------------------
+1) How does the overall happiness score vary by year? Create a line chart showing the trend over time.
+Which countries have the highest and lowest happiness scores? Create a bar chart to display the top and bottom 10 countries.
+How does each factor (e.g. GDP, social support, health, etc.) contribute to the overall happiness score? Create a stacked bar chart to visualize the breakdown for a specific year or region.
+Is there a correlation between a country's happiness score and its level of freedom? Create a scatter plot to explore this relationship.
+Are there any outliers or unusual trends in the data? Create a box plot or violin plot to identify any significant differences in happiness scores by region or factor.
+How does the distribution of happiness scores compare between different regions? Create a histogram or density plot for each region to compare the shape of their distributions.
+Are there any significant changes in the rankings of countries between years? Create a bubble chart to display the changes in rank over time.
+How do the happiness scores vary within each country? Create a choropleth map to show the distribution of happiness scores across different regions within each country.
+Is there a significant difference in happiness scores between developed and developing countries? Create a grouped bar chart to compare the average scores between the two categories.
+How do the happiness scores for a specific country vary over time? Create a line chart to show the trend for a specific country.
+Which are the top 10 happiest countries in the world, and what factors contribute to their happiness score?
+How has the global happiness score changed over time, and what factors have influenced these changes?
+Is there a correlation between a country's GDP per capita and its happiness score? How strong is this correlation?
+How does a country's social support score affect its happiness score? Are there any interesting trends or patterns in the data?
+Are there any significant differences in happiness scores between developed and developing countries? What factors might explain these differences?
+How does a country's level of corruption affect its happiness score? Is there a significant correlation between these two variables?
+Are there any significant differences in happiness scores between countries with different political systems (e.g. democratic vs. autocratic)?
+How does a country's level of gender equality affect its happiness score? Is there a significant correlation between these two variables?
+Are there any significant differences in happiness scores between countries with different levels of religious diversity or tolerance?
+How does a country's natural environment (e.g. air quality, access to green spaces) affect its happiness score? Is there a significant correlation between these two variables?
+
+-------------------
+Covid-19 Dataset
+-------------------
+
+How has the number of daily cases and deaths varied by country over time? Create a line chart to visualize the trend.
+Which countries have been hit hardest by the pandemic in terms of total cases and deaths? Create a bar chart to display the top 10 countries for each metric.
+How does the number of cases and deaths per capita vary by country? Create a scatter plot to explore this relationship.
+Are there any significant differences in the spread of the virus between developed and developing countries? Create a grouped bar chart to compare the average number of cases and deaths.
+How has the spread of the virus varied by region over time? Create a choropleth map to show the distribution of cases and deaths by region.
+How does the average age of the population correlate with the number of cases and deaths? Create a scatter plot to explore this relationship.
+Are there any significant differences in the number of cases and deaths between urban and rural areas within a country? Create a bubble chart to compare the two categories.
+How has the virus spread within a specific country? Create a heatmap to show the distribution of cases and deaths by region.
+What is the trend in the number of cases and deaths by age group? Create a stacked line chart to visualize the breakdown by age group.
+Are there any significant differences in the spread of the virus between countries with different healthcare systems? Create a grouped bar chart to compare the average number of cases and deaths between countries with different levels of healthcare access.

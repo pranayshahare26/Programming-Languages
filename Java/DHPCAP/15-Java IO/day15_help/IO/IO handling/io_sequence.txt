@@ -1,0 +1,24 @@
+Objective
+1.Accept name of text file from user(scanner)
+Read data from the file till EOF , in a buffered manner, display the same.
+
+
+2. Accept src & dest text file names.
+File copy in buffered manner.
+
+3. Objectve : Store product detail  present in a HashMap , sorted as per manufacture date, into a text file , using buffer.
+3.1 core class : Product ...
+3.2 Custom exc
+3.3 Validation rules 
+3.4 CollectionUtils : i/f
+1. List<Product> ---> Map
+2. add another method for sorting the map
+3.5 IOUtils : i/f
+add a method to write sorted product data to the text file (using buffers) 
+
+
+
+
+Enter Binary I/O
+
+Serialization & de-serialization
