@@ -87,7 +87,10 @@ print $temperature < 15? "Too cold!\n"
     : $temperature > 35? "Too hot!\n";
 -------------------------------------------------------------------------------------
 
-
+my $temperature = 22;
+print $temperature < 15 ? "Too cold!\n"
+    : $temperature > 35 ? "Too hot!\n"
+    : "Just right!\n";
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -111,6 +114,16 @@ use warnings;
 my @name = ('Andrew', 'Andy', 'Kaufman');
 my ( $first, $nick, $last ) = @name;
 print $first, "\"$nick\"", $last;
+
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Create an array with the values
+my @array = ("IMA", "IAF", "DRDO");
+
+# Print the values in the desired format
+print "$array[0] \"$array[1]\" $array[2]\n";
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

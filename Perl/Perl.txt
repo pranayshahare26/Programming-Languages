@@ -1125,8 +1125,8 @@ $ 		:	match end of line
 ()		:	Grouping
 []		:	Bracketed char class [0-9a-zA-Z_=]{2}
 {n}		:	Match exactly n times
-{n,}	:	Match at least n times
-{n,m}	: Match at least n but not more than n times
+{n,}		:	Match at least n times
+{n,m}		: 	Match at least n but not more than n times
 
 
 \w	:	Match to word char [a-zA-Z0-9_]
@@ -1284,11 +1284,11 @@ statement with three parameters:
 
 o The filehandle, such as OUT1
 o The mode: 
-	< or r 			Read Only Access										open(DATA, "<file.txt");
+	< or r 			Read Only Access					open(DATA, "<file.txt");
 	> or w 			Creates, Writes, and Truncates				open(DATA, ">file.txt");
-	>> or a 			Writes, Appends, and Creates					open(DATA, ">>file.txt");
-	+< or r+ 		Reads and Writes										open(DATA, "+<file.txt");
-	+> or w+ 		Reads, Writes, Creates, and Truncates		open(DATA, "+>file.txt");
+	>> or a 		Writes, Appends, and Creates				open(DATA, ">>file.txt");
+	+< or r+ 		Reads and Writes					open(DATA, "+<file.txt");
+	+> or w+ 		Reads, Writes, Creates, and Truncates			open(DATA, "+>file.txt");
 	+>> or a+ 		Reads, Writes, Appends, and Creates			open(DATA, "+>>file.txt");
 
 
